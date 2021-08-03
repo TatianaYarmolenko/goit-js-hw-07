@@ -1,6 +1,6 @@
-const elemCategories = document.querySelector('ul#categories');
-console.log('elemCategories', elemCategories);
-console.log(elemCategories.textContent);
+// const elemCategories = document.querySelector('ul#categories');
+// console.log('elemCategories', elemCategories);
+// console.log(elemCategories.textContent);
 
 // const firstElemCategories = elemCategories.firstElementChild;
 // console.log(firstElemCategories);
