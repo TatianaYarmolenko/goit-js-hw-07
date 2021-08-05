@@ -1,29 +1,11 @@
-// const elemCategories = document.querySelector('ul#categories');
-// console.log('elemCategories', elemCategories);
-// console.log(elemCategories.textContent);
+const elemCategories = document.querySelector('#categories');
+const itemCategories = elemCategories.querySelectorAll('li.item')
 
-// const firstElemCategories = elemCategories.firstElementChild;
-// console.log(firstElemCategories);
-// console.log(elemCategories.lastElementChild);
+console.log(`В списке ${itemCategories.length} категории.`);
 
-
-
-
-
-
-// const elemCategories = document.querySelector('#categories');
-// console.log(elemCategories);
-// const elemItems = elemCategories.querySelectorAll('.item');
-// console.log(`В списке ${elemItems.length} категории`);
-// console.log('');
-// //console.log(elemItems);
-// const titles = [];
-// elemItems.forEach(elem => {
-//   console.log('Категория : ', elem.getElementsByTagName('h2')[0].textContent);
-//   console.log(
-//     'Количество эелментов : ',
-//     elem.getElementsByTagName('li').length
-//   );
-//   console.log('');
-// });
-//console.log(title.flatMap(elem => Object.values(elem)));
+itemCategories.forEach(category => {
+   const categoryItem = category.querySelector('h2').textContent;
+   const categoryElements = category.querySelectorAll('li').length;
+   console.log(`Категория: ${categoryItem}`);
+   console.log(`Количество элементов: ${categoryElements}`);
+});
