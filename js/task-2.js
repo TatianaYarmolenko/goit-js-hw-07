@@ -7,16 +7,18 @@ const ingredients = [
    'Приправы',
  ];
 
- const elemIngredients = document.createElement('ingredients');
-//  elemIngredients.textContent = 'Картошка';
-//  elemIngredients.textContent = 'Грибы';
-//  elemIngredients.textContent = 'Чеснок';
-//  elemIngredients.textContent = 'Помидоры';
-//  elemIngredients.textContent = 'Зелень';
-//  elemIngredients.textContent = 'Приправы';
-
-const elIngr = document.querySelector('ingredients');
- elemIngredients.appendChild('ingredients');
- console.log(elemIngredients);
+// const elIngr = document.querySelector('#ingredients');
+//  elemIngredients.append('ingredients');
+//  console.log(elIngr);
 //  console.log(elemIngredients);
 //  document.ul.ingredients.firstChild(elemIngredients);
+
+const elemIngredientsParent = document.getElementById('ingredients')
+console.log(elemIngredientsParent);
+
+const elemIngredients = document.createElement('li')
+elemIngredients.textContent = 'Картошка'
+// elemIngredients.classList.add('Картошка')
+// console.log(elemIngredients);
+
+elemIngredientsParent.prepend(elemIngredients)
