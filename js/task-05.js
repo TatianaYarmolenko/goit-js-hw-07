@@ -1,13 +1,9 @@
 const input = document.querySelector('#name-input');
-input.addEventListener('text', onInputText)
+const nameLabel = document.querySelector('#name-output');
 
-function onInputText(event) {
-   event.preventDefault();
-   console.log('Это текст');
-   console.log(event.currentTarget);
+input.addEventListener('input', onInputChange)
 
-   const text = inputElement.value
-
-   const formData = new FormData(event.currentTarget);
-   console.log(formData);
+function onInputChange(event) {
+   console.log(event.currentTarget.value);
+   nameLabel.textContent = event.currentTarget.value.trim() || 'незнакомец';
 }
